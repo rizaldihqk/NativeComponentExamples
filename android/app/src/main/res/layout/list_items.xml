@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="AUDCAD"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/hargaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1493"
+            app:layout_constraintBottom_toBottomOf="@id/bid"
+            app:layout_constraintTop_toTopOf="@id/productName"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="83dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/lotLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="/ 0.1 lot"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/hargaid"
+            app:layout_constraintTop_toTopOf="@id/productName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/bidlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bid: "
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:layout_editor_absoluteX="16dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.23456"
+            app:layout_constraintStart_toEndOf="@id/bidlabel"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/askLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask: "
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/bid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.23456"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/askLabel" />
+
+        <ToggleButton
+            android:id="@+id/favButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.33"
+            android:background="@drawable/toggle_image"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="10dp"
+            tools:layout_editor_absoluteX="336dp"
+            tools:layout_editor_absoluteY="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
